@@ -1,1 +1,1 @@
-This is my first day with C Programming
+This is a new readme file
