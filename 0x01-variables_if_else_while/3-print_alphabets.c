@@ -11,6 +11,6 @@ int main(void)
 	int ch;
 
 	for (ch = 'a'; ch <= 'Z'; ch++)
-		putchar(ch);
+		putchar("\m" ch);
 	return (0);
 }
