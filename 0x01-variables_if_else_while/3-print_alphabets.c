@@ -8,9 +8,21 @@
  */
 int main(void)
 {
-	int ch;
+	int i, j;
 
-	for (ch = 'a'; ch <= 'Z'; ch++)
-		putchar(ch);
+	i = 97;
+	j = 65;
+
+	while (i < 123)
+	{
+		putchar(i);
+		i++;
+	}
+	while (j < 91)
+	{
+		putchar(j);
+		j++;
+	}
+	putchar(10);
 	return (0);
 }
