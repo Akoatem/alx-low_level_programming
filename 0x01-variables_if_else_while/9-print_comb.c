@@ -10,19 +10,15 @@ int main(void)
 {
 	int i;
 
-	i = 48;
-
-	while (i < 58)
+	for (i = 48; i < 58; i++)
 	{
 		putchar(i);
 		if (i != 57)
 		{
-			putchar(44);
-			putchar(32)
+			putchar(',');
+			putchar('');
 		}
-		i++;
 	}
-	putchar(10);
-
+	putchar('\n');
 	return (0);
 }
