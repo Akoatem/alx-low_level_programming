@@ -1,16 +1,20 @@
 #include <stdio.h>
 
 /**
- * msin - To print number in alphabet
- * Description: print in lowercase letters
+ * main - Print the letters of the alphabet
+ * Description: print the letters of the alphabet
  *
- * Return: Always 0 (Success)
+ *Return: Always 0 (Success)
  */
 int main(void)
 {
-	for (char c = 'a'; c <= 'z'; c++)
+	int i = 97;
+
+	while (i < 123)
 	{
-		putchar(c);
+		putchar(i);
+		i++;
 	}
+	putchar(10);
 	return (0);
 }
