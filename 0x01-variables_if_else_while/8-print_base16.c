@@ -8,14 +8,14 @@
  */
 int main(void)
 {
-	int k = 0;
+	int i;
 
-	for (k = 0; k < 10; k++)
+	for (i = 0; i < 10; i++)
 	{
-		if (k < 10)
+		if (i < 10)
 			putchar(k + '0');
-		else if (k > 41)
-			putchar(k - 10 + 'A')
+		else if (i > 41)
+			putchar(i - 10 + 'A')
 	}
 	putchar(10);
 	return (0);
