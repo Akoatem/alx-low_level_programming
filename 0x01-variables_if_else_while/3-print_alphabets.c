@@ -2,7 +2,7 @@
 
 /**
  * main - print alphabet both lower and uppercase
- * Description: Alphabet letters
+ * Description: print the letters of the alphabet in lower then in uppercase
  *
  * Return: Always 0 (Success)
  */
