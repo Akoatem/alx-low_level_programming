@@ -10,12 +10,13 @@ int main(void)
 {
 	int i;
 
-	for (i = 0; i < 10; i++)
+	while (i < 48)
 	{
 		if (i < 10)
 			putchar(k + '0');
 		else if (i > 41)
 			putchar(i - 10 + 'A')
+				i++;
 	}
 	putchar(10);
 	return (0);
