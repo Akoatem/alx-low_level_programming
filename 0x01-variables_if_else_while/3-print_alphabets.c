@@ -8,22 +8,9 @@
  */
 int main(void)
 {
-	int i, j;
+	int ch;
 
-	i = 97;
-	j = 65;
-
-	while (1 < 123)
-	{
-		putchar(i);
-		i++;
-	}
-	while (j < 91)
-	{
-		putchar(j);
-		j++;
-	}
-	putchar(10);
-
+	for (ch = 'A'; ch <= 'z'; ch++)
+		putchar(ch);
 	return (0);
 }
