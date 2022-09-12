@@ -1,47 +1,33 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- * main - welcome to double double
- * Description: Print two two numbers combination
+ * main - Print out double digits
+ * Description: This is to print two two numbers combination
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-	int a, b, c, d;
+	int p, q;
 
-	a = 48;
-	while (a < 58)
+	for (p = 0; p <= 98; p++)
 	{
-		b = 48;
-		while (b < 58)
+		for (q = p + 1; q <= 99; q++)
 		{
-			d = b + 1;
-			c = a;
-			while (c < 58)
-			{
-				while (d < 58)
-				{
-					putchar(a);
-					putchar(b);
-					putchar(32);
-					putchar(c);
-					putchar(d);
-					if (a < 57 || b < 55 || c < 57 || d < 57)
-					{
-						putchar(44);
-						putchar(32);
-					}
-					d++;
-				}
-				d = 48;
-				c++;
-			}
-			b++
-		}
-		a++
-	}
-	putchar(10);
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
+			putchar(' ');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
 
+			if (p == 98 && q == 99)
+				continue;
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
 	return (0);
 }
