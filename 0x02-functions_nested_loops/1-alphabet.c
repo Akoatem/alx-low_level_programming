@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - Print out alphabet of good
- * Description: Alphaphet print in order print the letters
+ * main - This function is to print letters
+ * Description: Printing of alphabet small letters
  *
  * Return: Always 0 (Success)
  */
