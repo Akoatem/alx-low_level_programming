@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * main - Print out alphabet
- * Description: Alphaphet print in order
+ * main - Print out alphabet of good
+ * Description: Alphaphet print in order print the letters
  *
  * Return: Always 0 (Success)
  */
-void print_alphabet(void);
+void print_alphabet(void)
 {
 	int i;
 
