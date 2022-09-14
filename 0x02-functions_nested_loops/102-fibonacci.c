@@ -8,25 +8,20 @@
 
 int main(void)
 {
-	long int sum;
-	long int first, second;
-	int count;
+	int i;
+	long int fibonacci[50];
 
-	sum = 0;
-	first = 0;
-	second = 1;
-	count = 0;
+	fibonacci[0] = 1;
+	fibonacci[1] = 2;
+	printf("%ld, %ld, ", fibonacci[0], fibonacci[1]);
 
-	while (count < 49)
+	for (i = 2; i < 50; i++)
 	{
-		sum = first + second;
-		printf("%li, ", sum);
-		first = second;
-		second = sum;
-
-		count++;
+		fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+		if (i == 49)
+			printf("%ld\n", fibonacci[i]);
+		else
+			printf("%ld, ", fibonacci[i]);
 	}
-	sum = first + second;
-	printf("%li\n", sum);
 	return (0);
 }
