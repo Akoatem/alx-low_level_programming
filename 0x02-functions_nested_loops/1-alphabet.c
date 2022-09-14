@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * main - This function is to print letters
- * Description: Printing of alphabet small letters
+ * print_alphabet - print alphabet
  *
- * Return: Always 0 (Success)
+ * Return: void
  */
+
+
 void print_alphabet(void)
 {
 	int i;
