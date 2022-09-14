@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * void print_alphabet_x10 -> print the lowest alphabet
- * Description: c is doing well to stress me.
+ * print_alphabet_x10 - print alphabet 10 times
+ *
  * Return: void
  */
 
