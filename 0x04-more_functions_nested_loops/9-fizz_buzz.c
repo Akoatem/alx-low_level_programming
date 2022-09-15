@@ -32,6 +32,7 @@ int main(void)
 				printf("Buz ");
 			}
 		}
+		num++;
 	}
 	return (0);
 }
