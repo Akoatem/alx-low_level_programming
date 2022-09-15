@@ -11,15 +11,7 @@
 
 int _isupper(int c)
 {
-	char c = 'a';
-
-	if (isupper(c) == 0)
-	{
-		_putchar("Not upper");
-	}
-	else
-	{
-		_putchar("Uppercase")
-	}
+	if (c >= 'A' && c <= 'Z')
+		return (1);
 	return (0);
 }
