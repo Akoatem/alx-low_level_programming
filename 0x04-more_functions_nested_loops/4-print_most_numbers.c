@@ -9,16 +9,12 @@
 
 void print_most_numbers(void)
 {
-	int x;
+	int i = '0';
 
-	for (x = 48; x < 58; x++)
+	for (; i <= '9'; i++)
 	{
-		if ((x == 50) || (x == 52))
-		{
-			continue
-		}
-		_putchar(x);
+		if (i != '2' && i != '4')
+			_putchar(i);
 	}
-	_putchar(10);
+	_putchar('\n');
 }
-
