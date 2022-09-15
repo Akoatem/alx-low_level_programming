@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * rint_triangle - function that prints a triangle
- * @size: the size of the triangle
+ *  print_triangle -  a function that prints a triangle, followed by a new line
+ *  @size: An input integer
  *
  * Return: Always 0
  */
