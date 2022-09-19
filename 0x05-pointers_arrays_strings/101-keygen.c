@@ -9,29 +9,27 @@
 
 int main(void)
 {
-	int i, password, len;
+	int pass[100];
+	int i, sum, n;
 
-	srand((unsigned int)time(NULL));
+	sum = 0;
+	srand(time(NULL));
 
-	if (len >= 5)
+	while (i < 100)
 	{
-		for (i = 0; i < len; i++)
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		_putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
 		{
-			int k = rand() % 128;
-			if ((k >= 48 && k <= 57) || (k >= 65 && k <= 90) || (k >= 97 && k <= 122) || (k >= 35 && k <= 37) || k == 64)
-			{
-				printf("%c", k);
-				else
-				{
-					i--;
-				}
-			}
-			printf('\n');
+			n = 2772 - sum - '0';
+			sum += n;
+			_putchar(n + '0');
+			break;
 		}
-		else
-		{
-			printf("LENGHT SHOULD BE GREATER THAN 5\N");
-		}
+		i++;
 	}
 	return (0);
 }
+
+
