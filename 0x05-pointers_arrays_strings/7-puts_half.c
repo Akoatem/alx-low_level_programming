@@ -17,10 +17,11 @@ void puts_half(char *str)
 	}
 	max = i;
 	j = max / 2;
-	for (; j <= max; j++)
+	while (j <= max)
 	{
 		_putchar(str[j]);
+		j++;
 	}
-	_putchar(str[j]);
+	_putchar('\n');
 }
 
