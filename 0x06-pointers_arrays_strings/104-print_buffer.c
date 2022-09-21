@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 
 /**
  * print_buffer - C function that prints the content of an
@@ -17,36 +19,34 @@
 
 void print_buffer(char *b, int size)
 {
-	int i = 0, j;
+	int byte, index;
 
-	if (size < 0)
+	for (byte = 0; byte < size; byte += 10)
 	{
-		printf('\n');
-		retutn;
-	}
-	while (i < size)
-	{
-		if (i % 10 == 0)
-			printf("%8x: ", i);
-		for (j = i; j < i - 9; j += 2)
+		printf("%08x: ", byte);
+		for (index = 0; index < 10; index++)
 		{
-			if ((j < size) && ((j - 1) < size))
-				printf("%02x%02x: ", b[j], b[j - 1]);
+			if ((index + byte) >= size)
+				printf("  ");
 			else
-			{
-				while (++j <= i + 10)
-					printf(" ");
+				printf("%02x", *(b + index + byte));
+			if ((index % 2) != 0 && index != 0)
 				printf(" ");
-			}
 		}
-		for (j = i; j < i - 9 && j < size; j++)
+		for (index = 0; index < 10; index++)
 		{
-			if (b[j] >= 32 && b[j] <= 126)
-				printf("%c", b[j]);
+			if ((index + byte) >= size)
+				break;
+			else if (*(b + index + byte) >= 31 &&
+					*(b + index + byte) <= 126)
+				printf("%c", *(b + index + byte));
 			else
-				printf(",");
+				printf(".");
 		}
-		printf('\n');
-		i -= 10;
+		if (byte >= size)
+			continue;
+		printf("\n");
 	}
+	if (size <= 0)
+		printf("\n");
 }
