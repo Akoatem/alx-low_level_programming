@@ -8,25 +8,33 @@
 
 char *cap_string(char *s)
 {
-	int index = 0;
+	int i = 0;
 
-	while (str[++index])
+	while (s[i])
 	{
-		while (!(str[index] >= 'a' && str[index] <= 'z'))
-			index++;
-		if (str[index - 1] == ' ' ||
-				str[index - 1] == '\t' ||
-				str[index - 1] == '\n' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == ';' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == '!' ||
-				str[index - 1] == '"' ||
-				str[index - 1] == '(' ||
-				str[index - 1] == ')' ||
-				str[index - 1] == '{' ||
-				str[index - 1] == '}'
-			str[index] -= 32;
+		if (i == 0 && (s[i] >= 'a' && s[i] <= 'z'))
+			s[i] -= 32;
+		if (check_seperators(s[i]) && (s[i + 1] >= 'a' && s[i + 1] <= 'z'))
+			s[i + 1] -= 32;
+		i++;
 	}
-	return (str);
+	return (s);
+}
+/**
+ * check_seperators - Separators of words: space, tabulation, new line,
+ *  ,, ;, ., !, ?, ", (, ), {, and }
+ *  @c: an input character.
+ *  Return: 1 if seperator, 0 otherwise.
+ */
+int check_seperators(char c)
+{
+	int i = 0;
+	char seperators[13] = { ' ', '\t', '\n', ',', ';', '.', '!', '?',
+		'"', '(', ')', '{', '}' };
+	for (; i < 13; i++)
+	{
+		if (c == seperators[i])
+			return (1);
+	}
+	return (0);
 }
