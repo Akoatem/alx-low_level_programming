@@ -9,7 +9,6 @@
 
 void _puts_recursion(char *s)
 {
-	/*s = "ako\0"*/
 	if (*s == '\0')
 	{
 		_putchar('\n');
