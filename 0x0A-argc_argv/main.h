@@ -10,6 +10,5 @@
  */
 
 int _putchar(char c);
-int check_nam(char *str);
 
 #endif /*MAIN_H*/
