@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
+
 
 /**
  * free_grid - A function that frees a 2D array of ints previously
