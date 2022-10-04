@@ -29,11 +29,11 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	for (i = 0; i < a; i++)
 	{
-		new_str[i] = a[i];
+		new_str[i] = s1[i];
 	}
 	for (j = 0; j < b; j++)
 	{
-		new_str[j] = b[j];
+		new_str[j] = s2[j];
 	}
 	return (new_str);
 }
