@@ -47,13 +47,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	while (i <= peter)
 	{
 		ptr_dog->name[i] = name[i];
-		peter++;
+		i++;
 	}
 	i = 0;
 	while (i <= count)
 	{
 		ptr_dog->owner[i] = owner[i];
-		count++;
+		i++;
 	}
 	ptr_dog->age = age;
 	return (ptr_dog);
