@@ -28,7 +28,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(ptr_dog);
 		return (NULL);
 	}
-	ptr_dog->name = malloc(count + 1);
+	ptr_dog->name = malloc(peter + 1);
 	if (ptr_dog->name == NULL)
 	{
 		free(ptr_dog->name);
@@ -43,11 +43,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(ptr_dog);
 		return (NULL);
 	}
+	i = 0;
 	while (i <= peter)
 	{
 		ptr_dog->name[i] = name[i];
 		peter++;
 	}
+	i = 0;
 	while (i <= count)
 	{
 		ptr_dog->owner[i] = owner[i];
