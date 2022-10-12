@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Error\m");
+		printf("Error\n");
 		exit(98);
 	}
 	/* check if theres only one operator*/
