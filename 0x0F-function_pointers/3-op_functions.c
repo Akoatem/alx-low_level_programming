@@ -1,45 +1,44 @@
 #include "3-calc.h"
-#include <stdlib.h>
-#include <stdio.h>
 
 /**
- * op_add - a function that returns the sum of a and b.
- * @a: an input integer
- * @b: an input integer
- * Return: The result to sum a + b.
+ * op_add - return the sum of 2 numbers.
+ * @a: integer.
+ * @b: integer.
+ *
+ * Return: sum
  */
 int op_add(int a, int b)
 {
 	return (a + b);
 }
-
 /**
- * op_sub - a function that returns the subtract of a and b.
- * @a: an input integer
- * @b: an input integer
- * Return: The result to substract a - b.
+ * op_sub - return differencse of 2 numbers
+ * @a: integer.
+ * @b: integer.
+ *
+ * Return: differences.
  */
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
-
 /**
- * op_mul - a function that returns the multiply of a and b.
- * @a: an input integer
- * @b: an input integer
- * Return: The result to multiply a * b.
+ * op_mul - return product of two numbers.
+ * @a: integer.
+ * @b: integer.
+ *
+ * Return: product.
  */
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
-
 /**
- * op_div - a function that returns the divide of a and b.
- * @a: an input integer
- * @b: an input integer
- * Return: The result to divide a / b.
+ * op_div - returns the quotient of two numbers.
+ * @a: integer.
+ * @b: integer.
+ *
+ * Return: quotient.
  */
 int op_div(int a, int b)
 {
@@ -48,15 +47,14 @@ int op_div(int a, int b)
 		printf("Error\n");
 		exit(100);
 	}
-
 	return (a / b);
 }
-
 /**
- * op_mod - a function that returns the module of a and b.
- * @a: an input integer
- * @b: an input integer
- * Return: The result to module a % b.
+ * op_mod - return the remainder of two numbers
+ * @a: integer.
+ * @b: integer.
+ *
+ * Return: remainder.
  */
 int op_mod(int a, int b)
 {

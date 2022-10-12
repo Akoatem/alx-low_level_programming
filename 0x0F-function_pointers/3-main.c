@@ -1,61 +1,38 @@
 #include "3-calc.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 /**
- * main - program to perform simple operations
+ * main - check arguments
  * @argc: argument count
- * @argv: array of arguments
- * Return: exits 0 normally, 98 on argc error, 99 on illegal operator
+ * @argv: argument vector.
+ *
+ * Return: error if number of argument is wrong
  */
+
 int main(int argc, char *argv[])
 {
-	int (*func)(int, int);
+	int a = 0, b = 0, res = 0;
+	char s;
 
 	if (argc != 4)
 	{
-		printf("Error\n");
+		printf("Error\m");
 		exit(98);
 	}
-
-	func = get_op_func(argv[2]);
-	if (func == NULL)
+	/* check if theres only one operator*/
+	if (argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
-	printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
-	return (0);
-}#include "3-calc.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-/**
- * main - program to perform simple operations
- * @argc: argument count
- * @argv: array of arguments
- * Return: exits 0 normally, 98 on argc error, 99 on illegal operator
- */
-int main(int argc, char *argv[])
-{
-	int (*func)(int, int);
-
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-
-	func = get_op_func(argv[2]);
-	if (func == NULL)
+	s = argv[2][0];
+	if (s != '+' && s != '-' && s != '/' && s != '*' && s != '%')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-
-	printf("%d\n", func(atoi(argv[1]), atoi(argv[3])));
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	res = (get_op_func(argv[2]))(a, b);
+	printf("%d\n", res);
 	return (0);
 }
