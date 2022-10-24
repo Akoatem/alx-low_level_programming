@@ -1,33 +1,22 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
- * print_listint_safe - A function that prints the elementsin a  list
+ * find_listint_loop - A function that finds the loop in a list
  * @head: A pointer to listint_t structure
- * Return: The number of nodes. Exits with 98 on failure
+ * Return: The address of the node where the loop start, or NULL
  */
-size_t print_listint_safe(const listint_t *head)
+listint_t *find_listint_loop(listint_t *head)
 {
-	size_t nodes = 0;
-	const listint_t *one = head, *two = head;
+	listint_t *one = head, *two = head;
 
-	if (head == NULL)
-		exit(98);
-
-	while (one && two && two->next && head)
+	while (one && two && two->next)
 	{
 		one = one->next;
 		two = two->next->next;
 		if (one == two)
 		{
-			printf("-> [%p] %d\n", (void *)head, head->n);
-			exit(98);
+			return (one);
 		}
-
-		printf("[%p] %d\n", (void *)head, head->n);
-		head = head->next;
-		nodes++;
 	}
-	head = NULL;
-	return (nodes);
+	return (NULL);
 }
